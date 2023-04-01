@@ -22,5 +22,10 @@ st.write("""P.S.Enjoy!
 """)
 st.write(dataframe)
 st.line_chart(dataframe) # adding the graph
+st.area_chart(dataframe) # diff type of graph
+
+# Simple coverter from C to F but in intaractive way
+my_slider=st.slider("Celsius")
+st.write(my_slider, "In Fahrenheit is:",my_slider*9/5+2)
 
 
