@@ -1,12 +1,14 @@
 import streamlit as st 
 import pandas
 
+#https://share.streamlit.io/
+
 track_of_study={
-    "week_1":3*4+3,
-    "week_2":12,
-    "week_3":4*8+3,
-    "week_4":5*4+1+(2*9),
-    "week_5":4*4+12
+    "week_1":[(3*4+3)*25],
+    "week_2":[12*25],
+    "week_3":[(4*8+3)*25],
+    "week_4":[25*(5*4+1+(2*9))],
+    "week_5":[(4*4+12)*25]
 }
 
 dataframe=pandas.DataFrame(track_of_study)
@@ -20,6 +22,5 @@ st.write("""P.S.Enjoy!
 """)
 st.write(dataframe)
 
-# to run this app add in terminal this command - streamlit run web_app_on_streamlit.py
-# https://share.streamlit.io/ hoste this app on streamlit 
+print(dataframe)
 
