@@ -21,6 +21,6 @@ We'll get there sooner or later!
 st.write("""P.S.Enjoy!
 """)
 st.write(dataframe)
+st.line_chart(dataframe) # adding the graph
 
-print(dataframe)
 
