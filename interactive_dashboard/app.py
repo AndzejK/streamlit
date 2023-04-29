@@ -56,3 +56,25 @@ st.dataframe(df_selection)
 
 
 # ---- MAIN PAGE ----
+st.title(":eyes: Sales Dashboard")
+st.markdown("##")
+
+# TOP KPI
+total_sales=int(df_selection["Total"].sum())
+avg_rating=round(df_selection["Rating"].mean(),2)
+star_rating=":star:"*int(round(avg_rating,0)/2)
+avg_sale_by_trans=round(df_selection['Total'].mean(),2)
+
+left_column,middle_column,right_column=st.columns(3)
+
+with left_column:
+    st.subheader("Total Sales:")
+    st.subheader(f"${total_sales:,}") # instead 76076 is 76,076
+with middle_column:
+    st.subheader("Average Raiting:")
+    st.subheader(f"{avg_rating} {star_rating}")
+with right_column:
+    st.subheader("Average Sales Per Transaction:")
+    st.subheader(f'${avg_sale_by_trans}')
+
+st.markdown("---")
