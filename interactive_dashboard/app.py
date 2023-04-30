@@ -11,7 +11,7 @@ st.set_page_config(page_title="Sales Data",
 # getting and setting up the excel file
 @st.cache_resource #st.cache is deprecated. Please use one of Streamlit's new caching commands, st.cache_data or st.cache_resource
 def get_data_from_excel():
-    df=pd.read_excel(io='files/supermarkt_sales.xlsx',
+    df=pd.read_excel(io='/files/supermarkt_sales.xlsx',
         engine='openpyxl',
         sheet_name='Sales',
         skiprows=3, # since the headers starts from 4th row, 1st 3 just for decoration 
