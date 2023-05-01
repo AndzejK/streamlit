@@ -27,9 +27,9 @@ SOCIAL_MEDIA = {
     "GitHub": "https://github.com/AndzejK",
 }
 PROJECTS = {
-    "🏆 Sales Dashboard - ",
-    "🏆 Income and Expense Tracker -",
-    "🏆 Desktop Application - ",   
+    "🏆 No. 1 - <Name 1>":"https://#",
+    "🏆 No. 2 - <Name 2>":"https://#",
+    "🏆 No. 3 - <Name 3>":"https://#",   
 }
 
 st.set_page_config(page_title=PAGE_TITLE,page_icon=PAGE_ICON)
@@ -59,3 +59,69 @@ with col2:
     st.write(EMAIL)
 
 # ---- Social Links ----
+st.write("#")
+
+# based on social media links we determine how manu cols we need
+cols=st.columns(len(SOCIAL_MEDIA))
+
+# loop through dictionary
+for index,(platform,link) in enumerate(SOCIAL_MEDIA.items()):
+    cols[index].write(f"[{platform}]({link})")
+
+# ---- EXPERIENCE & QUALIFICATIONS ----
+st.write("#")
+st.subheader("Experience & Qualification")
+# st.write("---")
+st.write(
+    """
+- ✔️ I have strong communication skills
+- ✔️ Experience using Python and a wide variety of its libraries
+- ✔️ I possess good technical skills
+- ✔️ Excellent team-player
+    """
+)
+
+# --- SKILLS ---
+st.write('\n')
+st.subheader("Hard Skills")
+st.write(
+    """
+- 👩‍💻 Programming: Python, SQL
+- 🗄️ Databases: Postgres, MSSQL
+"""
+)
+
+# --- WORK HISTORY ---
+st.write('\n')
+st.subheader("Work History")
+st.write("---")
+
+# --- JOB 1
+st.write("🚧", "**Application Support Engineer | alterDomus**")
+st.write("05/2023 - Present")
+st.write(
+    """
+- ► In progress...
+
+"""
+)
+
+# --- JOB 2
+st.write('\n')
+st.write("🚧", "**Customer Support Specialist | Revel Systems**")
+st.write("08/2022 - 04/2023")
+st.write(
+    """
+- ► Finding common ground between a user and me to set up a particular feature for Pont Of Sale (POS)
+- ► Troubleshooting network, primarily LAN
+- ► Guiding an end-user on how to set up different card readers (EFT) and troubleshoot them
+"""
+)
+
+# --- Projects & Accomplishments ---
+st.write('\n')
+st.subheader("Projects & Accomplishments")
+st.write("---")
+
+for project,link in PROJECTS.items():
+    st.write(f"[{project}]({link})")
